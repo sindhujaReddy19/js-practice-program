@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+var i,num=200,digits=0,res,power=0;
+var temp=i;
+for(i=1;i<=num;i++)
+{
+while(i!=0)
+{
+num=parseInt(i/10);
+digits++;
+
+}
+i=temp;
+while(i!=0)
+{
+res=i%10;
+power+=Math.pow(res,digits);
+i=parseInt(i/10);
+}
+
+if(temp==power)
+{
+document.write(temp+"is armstrong")
+}
+else
+{
+document.write(temp+"is not armstrong")
+}
+}
+</script>
+</body>
+</html>

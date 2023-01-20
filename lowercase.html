@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+var name="Sindhuja Reddy "
+var lastname="Rangammagari"
+var pos=name.indexOf("Reddy");
+var pov=name.lastIndexOf("R");
+var fullname=name.concat(lastname);
+var Fullname=name.slice(0,4);
+var string=name.substring(0,4);
+var str=name.substr(0,7);
+var replace=name.replace('y','i');
+var replaceall=name.replaceAll('d','e');
+var start='7'
+var res=start.padStart(5,'*');
+var end='9'
+var rev=end.padEnd(5,'3');
+var name1="     Sindhuja Reddy     "
+var res1=name1.trim();
+var res2=name1.trimStart();
+var res3=name1.trimEnd();
+var res4=name.split('');
+document.write("<br> lower case :"+name.toLowerCase());
+document.write("<br> index of :"+"Reddy is found at:"+pos);
+document.write("<br> last index :"+"R is found at"+pov);
+document.write("<br> concatination :"+"FULLNAME IS:"+fullname);
+document.write("<br> slice :"+"full name:"+Fullname);
+document.write("<br> substring :"+"fullname : "+string);
+document.write("<br> substr :"+"fullname"+str);
+document.write("<br> replace :"+"replaced name is :"+replace);
+document.write("<br> replaceall :"+"replaced name is :"+replaceall);
+document.write("<br> padstart :"+res);
+document.write("<br> padend :"+rev);
+document.write("<br> trim :"+res1.length);
+document.write("<br> trimstart :"+res2.length);
+document.write("<br> trimend :"+res3.length);
+
+document.write("<br> split :"+res4);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+var num=434,rem;sum=0;
+var temp=num;
+while(num!=0)
+{
+rem=num%10;
+sum=sum*10+rem;
+num=parseInt(num/10);
+}
+if(temp==sum)
+{
+document.write(temp+"is a palindrome")
+}
+else
+{
+document.write(temp+"is not a palindrome")
+}
+
+
+</script>
+</body>
+</html>
