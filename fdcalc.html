@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calc{
+        border:1px solid lightgrey;
+        margin-left:500px;
+        width:350px;
+        margin-top: 100px;
+        line-height: 30px;
+        }
+        .btn1{
+    background-color: green;
+border: none;
+        }
+        .btn2{
+            background-color: red;
+            border: none;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="calc">
+        <table>
+            <h4 align="center">FD calculator</h4>
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label>amount</label></td>
+                <td><input type="number" id="amount"></td>
+            </tr>
+            <tr>
+                <td><label>term</label></td>
+                <td><select id="term">
+                    <option value="0">select your option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label>year of birth</label></td>
+                <td><input type="number" id="age"></td>
+            </tr>
+            <tr>
+                <td><button onclick="username()" class="btn1">submit</button></td>
+                <td><button class="btn2">clear</button></td>
+            </tr>
+            <tr>
+                <td><label>statement</label></td>
+                <td><label id="statement"></label></td>
+            </tr>
+        </table>
+        <div>
+            <script>
+                function username(){
+                var name=document.getElementById("name").value
+                var amount=parseInt(document.getElementById("amount").value)
+                var year=document.getElementById("age").value;
+                var term=parseInt(document.getElementById("term").value)
+                var age=parseInt(2023-year);
+                var rate;
+                if (age<=40)
+                {
+                    rate=5
+                }
+                else if(age>40&&age<=60)
+                {
+                    rate=6
+                }
+                else if(age>60)
+                {
+                    rate=8
+                }
+                var intrest=parseInt((amount*term*rate)/100)
+                var total=parseInt(amount+intrest);
+                document.getElementById("statement").innerHTML="rate of intrest is"+total
+
+
+
+
+
+                }
+            </script>
+    
+
+        
+</body>
+</html>

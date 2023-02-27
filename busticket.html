@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bus{
+            background-image:url("https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/14121111430379551600x1060.jpg?itok=PePqXBRg");
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-image:url("https://blog.travelcarma.com/wp-content/uploads/2018/08/bus-booking-1-1.jpg") ;
+            padding: 50px;
+        }
+        .btn{
+            border: none;
+            background-color: green;
+            border-radius: 10px;
+            color: white;
+        }
+        .bus1{
+            border: none;
+            background-color:rgba(24, 16, 16, 0.5);
+            margin-left: 800px;
+            margin-top: 50px;
+            width: 400px;
+            padding: 50px;
+            text-decoration:none;
+            font-size:larger;
+            color: rgb(248, 255, 255);
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body class="bus">
+    <div class="bus1">
+        <table>
+            <h2 style="font-style: italic;" align="center">Bus Ticket Reservation</h2>
+<tr>
+    <td>Name</td>
+    <td><input type="text" id="name"></td>
+</tr>
+<tr>
+    <td>From</td>
+    <td><input type="text" id="from"></td>
+</tr>
+<tr>
+    <td>Destination</td>
+    <td><select id="dest">
+        <option value="0">select place</option>
+        <option value="500">Tirupathi</option>
+        <option value="300">Vijayawada</option>
+        <option value="400">srisailam</option>
+    </select></td>
+</tr>
+<tr>
+    <td>Number Of Passengers</td>
+    <td><input type="number" id="num"></td>
+</tr>
+<tr>
+    <td><button onclick="busticket()" class="btn">submit</button></td>
+</tr>
+    <tr>
+        <td><label>statement:</label></td>
+        <td><label id="statement"><label></td>
+    </tr>
+        </table>
+    </div>
+    <script>
+        function busticket()
+        {
+            var name=document.getElementById("name").value;
+            var from=document.getElementById("from").value;
+            var destination=document.getElementById("dest").value;
+            var number=document.getElementById("num").value;
+            var amount=parseInt(destination*5*number);
+            console.log(amount);
+            var total=parseInt((amount*18)/100);
+            var totalamount=parseInt(amount+total);
+            document.getElementById("statement").innerHTML="total amount is :"+totalamount;
+        }
+
+
+    </script>
+</body>
+</html>

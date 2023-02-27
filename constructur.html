@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+class person
+{
+constructor(fullname,age,phone)
+{
+    this.fullname=fullname;
+    this.age=age;
+    this.phone=phone;
+}
+display()
+{
+    return "hello"+this.fullname
+}
+getAge()
+{
+    return this.fullname+"is"+this.age+"years old";
+}
+}
+var p1=new person("john",25,"7287886283");
+document.write(p1.display());
+document.write("<br>"+p1.getAge());
+</script>
+
+</body>
+</html>

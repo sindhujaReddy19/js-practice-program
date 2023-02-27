@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .login{
+            border: 1px solid;
+            width: 300px;
+            padding: 30px;
+            margin-top: 100px;
+            margin-left: 500px;
+        }
+        #lab{
+            margin-top: 100px;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+<body class="login">
+    <form>
+    <table>
+        <h2 align="center">Login</h2`>
+        <tr>
+            <td>Username *</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="username" pattern="[a-z]{5,}" title="please enter 5 charecters" required></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+        </tr>   </form>
+    
+
+        <tr>
+            <td><input type="password" id="password" pattern="[A-Za-z0-9]{7,}"></td>
+            <td><button onclick="btn()"><i class="fa-sharp fa-solid fa-eye"></i></button></td>
+        </tr>
+    <tr>
+        <td><button>cancel</button></td>
+    
+    
+        <td><button onclick="page()" id="login">Log in</button></td>
+    </tr>
+
+    </table>
+ 
+    <script>
+        function page(){
+        var name=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+        var password1=name.slice(0,3);
+        var finalpwd=password1+"1234";
+            if(password==finalpwd){
+                alert("login successful")
+            }
+            else{
+                alert("login not successful")
+            }
+        }
+        function btn(){
+
+           
+            var pwd1=document.getElementById("password");
+
+            if(pwd1.type=="password")
+            {
+                pwd1.type="text"
+            }
+            else{
+                pwd1.type="password"
+            }
+        }
+        </script>   
+</body>
+</html>

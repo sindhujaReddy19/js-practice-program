@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bill{
+            border: 1px solid;
+            width: 350px;
+            margin-top: 200px;
+            margin-left: 500px;
+            padding: 10px;
+        }
+        .text{
+            border-top: 1px ;
+            border-left: 1px;
+            border-right: 1px;
+            outline: none;
+        }
+        .number{
+            border-top: 1px ;
+            border-left: 1px;
+            border-right: 1px;  
+            outline: none;
+        }
+        .city{
+            border-top: 1px ;
+            border-left: 1px;
+            border-right: 1px;
+            outline: none;
+        }
+        .type{
+            border-top: 1px ;
+            border-left: 1px;
+            border-right: 1px;
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bill">
+    <table>
+        <h3 align="center">TSSPDCL</h3>
+        <tr>
+            <td>Meter Number</td>
+            <td><input type="text" class="text" id="meter"></td>
+        </tr>
+        <tr>
+            <td>Number of units</td>
+            <td><input type="number" class="number" id="units"></td>
+        </tr>
+        <tr>
+            <td>city</td>
+            <td><select class="city" id="city1">
+                <option>select city</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="bangalore">Bangalore</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Building type</td>
+            <td><select class="type" id="build">
+                <option>select building type</option>
+                <option value="commercial">commercial</option>
+                <option value="non commercial">Non-Commercial</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label id="label">Total Amount:</label></td>
+        </tr>
+        <tr>
+            <td><button>Print</button></td>
+            <td><button onclick="current()">Calculate</button></td>
+        </tr>
+    </table>
+    <script>
+        function current(){
+        var meter=document.getElementById("meter").value;
+        var units=document.getElementById("units").value;
+        var city2=document.getElementById("city1").value;
+        var building=document.getElementById("build").value;
+        if(city2=="bangalore"&&building=="commercial")
+        {
+            unitcharge=15;
+            gst=8;
+        }
+        else if(city2=="bangalore"&&building=="non-commercial")
+        {
+            unitcharge=11;
+            gst=6;
+        }
+        else if(city2=="hyderabad"&&building=="commercial")
+        {
+            unitcharge=12;
+            gst=6;
+        }
+        else if(city2=="hyderabad"&&building=="non-commercial")
+        {
+            unitcharge=10;
+            gst=5
+        }
+        var total=parseInt(units*unitcharge)
+        var totalamount=parseInt((total*gst)/100)
+        var final=parseInt(total+totalamount)
+        document.getElementById("label").innerHTML="total amount is"+final;
+        }
+        </script>
+</body>
+</html>
